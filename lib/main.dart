@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:travel_app/LandingScreen.dart';
-import 'package:travel_app/Styles.dart';
+import 'package:travel_app/Screens/LandingScreen.dart';
+import 'package:travel_app/common/Styles.dart';
 
 void main() {
   runApp(MyApp());
