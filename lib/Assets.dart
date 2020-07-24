@@ -12,5 +12,5 @@ class Assets {
 
   static Widget loginPageImage({context}) =>
       SvgPicture.asset(loginPageImagePath,
-          width: MediaQuery.of(context).size.width);
+          width: MediaQuery.of(context).size.width/2);
 }

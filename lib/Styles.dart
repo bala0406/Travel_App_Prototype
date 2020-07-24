@@ -14,6 +14,12 @@ class Styles {
         fontWeight: FontWeight.w600,
         letterSpacing: titleLetterSpacing,
       );
+  static TextStyle get titleTextStyleDarkBlue => GoogleFonts.montserrat(
+        color: textDarkBlueColor,
+        fontSize: 24,
+        fontWeight: FontWeight.w600,
+        letterSpacing: titleLetterSpacing,
+      );
 
   static TextStyle get buttonTextStyle => GoogleFonts.montserrat(
         color: textDarkBlueColor,
@@ -21,17 +27,26 @@ class Styles {
         fontWeight: FontWeight.w400,
       );
 
-      static TextStyle get textFieldTextStyle => GoogleFonts.montserrat(
+  static TextStyle get textFieldTextStyle => GoogleFonts.montserrat(
         color: textDarkBlueColor,
         fontSize: 14,
         fontWeight: FontWeight.w400,
       );
 
-      static TextStyle get errorTextStyle => GoogleFonts.montserrat(
+  static TextStyle get errorTextStyle => GoogleFonts.montserrat(
         color: accentRedColor,
         fontSize: 11,
         fontWeight: FontWeight.w400,
       );
-  
 
+  static TextStyle get smallBodyTextStyle => GoogleFonts.montserrat(
+        color: textDarkBlueColor,
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+      );
+  static TextStyle get normalBodyTextStyle => GoogleFonts.montserrat(
+        color: textDarkBlueColor,
+        fontSize: 18,
+        fontWeight: FontWeight.w400,
+      );
 }
