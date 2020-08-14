@@ -1,4 +1,4 @@
-#Fri Jul 24 20:17:27 IST 2020
-base.0=/home/bala/flutter_projects/Travel_App/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Fri Aug 14 18:40:53 IST 2020
+base.0=D\:\\flutter_apps\\Travel_App_Prototype\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

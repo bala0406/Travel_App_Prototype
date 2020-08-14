@@ -10,27 +10,28 @@ class LandingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double paddingValue = MediaQuery.of(context).size.width / 10;
+    // final double paddingValue = MediaQuery.of(context).size.width / 16;
+    final double paddingValue = 24;
     return Scaffold(
         body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Expanded(
           flex: 1,
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: paddingValue / 1.5),
+            padding: EdgeInsets.symmetric(horizontal: paddingValue),
             child: Align(
                 alignment: Alignment.bottomLeft,
                 child: Text(
                   Texts.landingScreenText,
-                  style: Styles.titleTextStyle,
+                  style: Theme.of(context).textTheme.headline1,
                 )),
           ),
         ),
         Expanded(
           flex: 3,
           child: Container(
-              padding: EdgeInsets.symmetric(horizontal: paddingValue / 3),
+              padding: EdgeInsets.symmetric(horizontal: paddingValue),
               child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Assets.landingPageImage(context: context))),
@@ -38,24 +39,28 @@ class LandingScreen extends StatelessWidget {
         Expanded(
           flex: 2,
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: paddingValue / 1.5),
+            padding: EdgeInsets.symmetric(horizontal: paddingValue),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 button(
-                    text: "Register",
-                    onTap: () {},
-                    color: Styles.accentRedColor,
-                    splashColor: Styles.splashColor),
-                SizedBox(height: 10),
+                  text: "Register",
+                  onTap: () {},
+                  color: Styles.accentRedColor,
+                  textStyle: Theme.of(context).textTheme.button,
+                ),
+                SizedBox(height: 8),
                 button(
                   text: "Login",
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => LoginScreen()));
                   },
-                  color: Styles.greyShadeColor,
-                  splashColor: Styles.greySplashColor,
+                  textStyle: Theme.of(context)
+                      .textTheme
+                      .button
+                      .copyWith(color: Theme.of(context).primaryColor),
+                  color: Theme.of(context).secondaryHeaderColor,
                 ),
               ],
             ),

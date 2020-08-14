@@ -1,28 +1,57 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:travel_app/common/Styles.dart';
 
-Widget button({String text, Function onTap, Color splashColor, Color color}) {
+Widget button(
+    {String text,
+    Function onTap,
+    Color color,
+    TextStyle textStyle,
+    BuildContext context}) {
   return Container(
-    height: 55,
+    alignment: Alignment.center,
+    height: Styles.textButtonHeight,
     decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(10),
+      borderRadius: BorderRadius.circular(8),
       color: color,
     ),
     child: Material(
       color: Colors.transparent,
       child: InkWell(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(8),
         onTap: onTap,
         splashFactory: InkRipple.splashFactory,
-        splashColor: splashColor,
-        highlightColor: splashColor,
         child: Center(
           child: Text(
             text,
-            style: color == Styles.accentRedColor
-                ? Styles.accentRedButtonTextStyle
-                : Styles.greyButtonTextStyle,
+            style: textStyle,
           ),
+        ),
+      ),
+    ),
+  );
+}
+Widget iconButton(
+    {Widget image,
+    Function onTap,
+    Color color,
+    TextStyle textStyle,
+    BuildContext context}) {
+  return Container(
+    alignment: Alignment.center,
+    height: Styles.iconButtonHeight,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(8),
+      color: color,
+    ),
+    child: Material(
+      color: Colors.transparent,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(8),
+        onTap: onTap,
+        splashFactory: InkRipple.splashFactory,
+        child: Center(
+          child: image
         ),
       ),
     ),
