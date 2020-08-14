@@ -120,7 +120,10 @@ class LoginScreen extends StatelessWidget {
                       textStyle: Theme.of(context).textTheme.button,
                     ),
                     SizedBox(height: 12),
-                    Text("Forgot Password?",style: Theme.of(context).textTheme.bodyText2,), //TODO: implement forgot password
+                    Text(
+                      "Forgot Password?",
+                      style: Theme.of(context).textTheme.bodyText2,
+                    ), //TODO: implement forgot password
                     SizedBox(height: 16),
                   ],
                 ),
@@ -132,12 +135,15 @@ class LoginScreen extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Container(
-                            color: Theme.of(context).primaryColor,
-                            height: 0.5,
-                          ),
+                          color: Theme.of(context).primaryColor,
+                          height: 0.5,
+                        ),
                       ),
                       SizedBox(width: 16),
-                      Text("or",style: Theme.of(context).textTheme.bodyText2,),
+                      Text(
+                        "or",
+                        style: Theme.of(context).textTheme.bodyText2,
+                      ),
                       SizedBox(width: 16),
                       Expanded(
                         child: Container(
@@ -149,7 +155,8 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 16),
-                Text("Sign in with",style: Theme.of(context).textTheme.bodyText2),
+                Text("Sign in with",
+                    style: Theme.of(context).textTheme.bodyText2),
                 SizedBox(height: 16),
                 Row(
                   children: [
@@ -164,8 +171,7 @@ class LoginScreen extends StatelessWidget {
                       child: iconButton(
                           image: Assets.facebookLoginImage(),
                           onTap: () {},
-                          color: Color(0xFF2196F3)
-                      ),
+                          color: Color(0xFF2196F3)),
                     ),
                   ],
                 )
