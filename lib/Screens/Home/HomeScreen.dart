@@ -7,15 +7,20 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
+      key: _scaffoldKey,
+      drawer: Drawer(),
       appBar: AppBar(
         leading: IconButton(
             icon: Icon(Icons.menu, color: Colors.white),
-            onPressed: () {},
+            onPressed: () {
+              _scaffoldKey.currentState.openDrawer();
+            },
             splashRadius: 24),
         title: Text(
           "TRAVEL GO",
@@ -70,12 +75,12 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: button(
-                    text: "SEARCH FLIGHTS",
-                    context: context,
-                    color: Colors.white,
-                    textStyle: Theme.of(context).textTheme.bodyText1,
-                    onTap: () {},
-                    ),
+                  text: "SEARCH FLIGHTS",
+                  context: context,
+                  color: Colors.white,
+                  textStyle: Theme.of(context).textTheme.bodyText1,
+                  onTap: () {},
+                ),
               )
             ],
           )

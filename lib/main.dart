@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:travel_app/Screens/Home/HomeScreen.dart';
 import 'package:travel_app/Screens/LandingScreen.dart';
+import 'package:travel_app/Screens/SplashScreen.dart';
 import 'package:travel_app/common/Styles.dart';
 
 void main() {
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
             bodyText1: Styles.body1TextStyle,
             bodyText2: Styles.body2TextStyle,
           )),
-      home: LandingScreen(),
+      home: HomeScreen(),
     );
   }
 }

@@ -1,8 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:travel_app/Screens/Home/HomeScreen.dart';
 import 'package:travel_app/Widgets/Button.dart';
+import 'package:travel_app/common/AnimatedButton.dart';
 import 'package:travel_app/common/Assets.dart';
 import 'package:travel_app/common/Styles.dart';
 import 'package:travel_app/common/Texts.dart';
@@ -10,7 +11,6 @@ import 'package:travel_app/common/Texts.dart';
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context);
     // final double paddingValue = MediaQuery.of(context).size.width / 10;
     final double paddingValue = 24;
     bool isUsernameOrPasswordWrong = false;
@@ -115,7 +115,9 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(height: 16),
                     button(
                       text: "Login",
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                      },
                       color: Theme.of(context).accentColor,
                       textStyle: Theme.of(context).textTheme.button,
                     ),
