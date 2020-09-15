@@ -1,9 +1,6 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:travel_app/Screens/Home/HomeScreen.dart';
 import 'package:travel_app/Widgets/Button.dart';
-import 'package:travel_app/common/AnimatedButton.dart';
 import 'package:travel_app/common/Assets.dart';
 import 'package:travel_app/common/Styles.dart';
 import 'package:travel_app/common/Texts.dart';

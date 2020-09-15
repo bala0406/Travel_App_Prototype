@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_toggle_tab/flutter_toggle_tab.dart';
 import 'package:travel_app/Widgets/Button.dart';
-import 'package:travel_app/Widgets/ToggleSwitch.dart';
 import 'package:travel_app/common/Styles.dart';
 
 class FlightsScreen extends StatefulWidget {
@@ -13,7 +12,6 @@ class _FlightsScreenState extends State<FlightsScreen> {
   int _selectedTab = 0;
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
 
     return SingleChildScrollView(

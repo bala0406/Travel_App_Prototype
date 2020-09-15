@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:travel_app/Screens/Home/HomeScreen.dart';
-import 'package:travel_app/Screens/LandingScreen.dart';
-import 'package:travel_app/Screens/LoginScreen.dart';
 import 'package:travel_app/Screens/SplashScreen.dart';
 import 'package:travel_app/common/Styles.dart';
 
