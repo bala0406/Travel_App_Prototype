@@ -32,6 +32,13 @@ class Styles {
         letterSpacing: titleLetterSpacing,
       );
 
+  static TextStyle get secondaryTitleTextStyle => GoogleFonts.montserrat(
+        color: primaryDarkBlueColor,
+        fontSize: title3FontSize,
+        fontWeight: FontWeight.w500,
+        letterSpacing: titleLetterSpacing,
+      );
+
   static TextStyle get accentTitleTextStyle => GoogleFonts.montserrat(
         color: accentRedColor,
         fontSize: title1FontSize,
@@ -68,9 +75,19 @@ class Styles {
         fontSize: body1FontSize,
         fontWeight: FontWeight.w400,
       );
+  static TextStyle get body1TextStyleBold => GoogleFonts.montserrat(
+        color: primaryDarkBlueColor,
+        fontSize: body1FontSize,
+        fontWeight: FontWeight.w500,
+      );
   static TextStyle get body2TextStyle => GoogleFonts.montserrat(
         color: primaryDarkBlueColor,
         fontSize: body2FontSize,
         fontWeight: FontWeight.w400,
+      );
+  static TextStyle get body2TextStyleBold => GoogleFonts.montserrat(
+        color: primaryDarkBlueColor,
+        fontSize: body2FontSize,
+        fontWeight: FontWeight.w500,
       );
 }
