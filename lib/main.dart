@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/Screens/Home/HomeScreen.dart';
 import 'package:travel_app/Screens/SplashScreen.dart';
 import 'package:travel_app/common/Styles.dart';
 
