@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/common/Styles.dart';
 
-
 Widget button(
     {String text,
     Function onTap,
@@ -12,25 +11,42 @@ Widget button(
     alignment: Alignment.center,
     height: Styles.textButtonHeight,
     decoration: BoxDecoration(
-  borderRadius: BorderRadius.circular(8),
-  color: color,
+      borderRadius: BorderRadius.circular(8),
+      color: color,
     ),
     child: Material(
-  color: Colors.transparent,
-  child: InkWell(
-    borderRadius: BorderRadius.circular(8),
-    onTap: onTap,
-    splashFactory: InkRipple.splashFactory,
-    child: Center(
-      child: Text(
-        text,
-        style: textStyle,
+      color: Colors.transparent,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(8),
+        onTap: onTap,
+        splashFactory: InkRipple.splashFactory,
+        child: Center(
+          child: Text(
+            text,
+            style: textStyle,
+          ),
+        ),
       ),
-    ),
-  ),
     ),
   );
 }
+
+Widget wrapWithButton(
+    {Widget child,
+    Function onTap,
+    BuildContext context}) {
+  return Container(
+    child: Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onTap,
+        splashFactory: InkRipple.splashFactory,
+        child: Center(child: child),
+      ),
+    ),
+  );
+}
+
 Widget iconButton(
     {Widget image,
     Function onTap,
@@ -50,9 +66,7 @@ Widget iconButton(
         borderRadius: BorderRadius.circular(8),
         onTap: onTap,
         splashFactory: InkRipple.splashFactory,
-        child: Center(
-          child: image
-        ),
+        child: Center(child: image),
       ),
     ),
   );

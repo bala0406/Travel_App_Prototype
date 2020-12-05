@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_toggle_tab/flutter_toggle_tab.dart';
+import 'package:travel_app/Screens/Home/SearchResults/SearchResultsScreen.dart';
 import 'package:travel_app/Widgets/Button.dart';
 import 'package:travel_app/common/Styles.dart';
 
@@ -139,7 +140,12 @@ class _FlightsScreenState extends State<FlightsScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: button(
                 text: "SEARCH FLIGHTS",
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SearchResultsScreen()));
+                },
                 color: Theme.of(context).accentColor,
                 textStyle: Theme.of(context).textTheme.button,
                 context: context),
@@ -183,9 +189,9 @@ class _FlightsScreenState extends State<FlightsScreen> {
       unSelectedTextStyle: Styles.body2TextStyleBold,
       labels: ["ONE WAY", "ROUND TRIP"],
       selectedLabelIndex: (index) {
-        // setState(() {
-        //   _selectedToggleTab = index;
-        // });
+        setState(() {
+          _selectedToggleTab = index;
+        });
       },
     );
   }
@@ -356,7 +362,9 @@ class _FlightsScreenState extends State<FlightsScreen> {
                           ),
                           Text(
                             day,
-                            style: Theme.of(context).textTheme.bodyText1,
+                            style: Styles.body1TextStyle,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ],
                       ),

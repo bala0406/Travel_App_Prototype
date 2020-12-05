@@ -1,9 +1,14 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_app/Screens/Home/HomeScreen.dart';
+import 'package:travel_app/Screens/Home/SearchResults/SearchResultsScreen.dart';
+import 'package:travel_app/Screens/LandingScreen.dart';
 import 'package:travel_app/Screens/SplashScreen.dart';
 import 'package:travel_app/common/Styles.dart';
 
 void main() {
+  // runApp(DevicePreview(
+  //   builder:(_) => MyApp()));
   runApp(MyApp());
 }
 
@@ -12,7 +17,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      // locale: DevicePreview.of(context).locale, // <--- /!\ Add the locale
+      // builder: DevicePreview.appBuilder,
       theme: ThemeData(
           visualDensity: VisualDensity.adaptivePlatformDensity,
           primaryColor: Styles.primaryDarkBlueColor,
@@ -34,7 +40,7 @@ class MyApp extends StatelessWidget {
             bodyText1: Styles.body1TextStyle,
             bodyText2: Styles.body2TextStyle,
           )),
-      home: SplashScreen(),
+      home: LandingScreen(),
     );
   }
 }

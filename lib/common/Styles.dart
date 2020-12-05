@@ -34,10 +34,10 @@ class Styles {
 
   static TextStyle get secondaryTitleTextStyle => GoogleFonts.montserrat(
         color: primaryDarkBlueColor,
-        fontSize: title3FontSize,
-        fontWeight: FontWeight.w500,
-        letterSpacing: titleLetterSpacing,
-      );
+    fontSize: title3FontSize,
+    letterSpacing: titleLetterSpacing,
+    fontWeight: FontWeight.w500,
+  );
 
   static TextStyle get accentTitleTextStyle => GoogleFonts.montserrat(
         color: accentRedColor,
